@@ -7,6 +7,7 @@ void hola()
 {
     cout<<"hola"<<"\n";
 }
+//el void hola es simplemente una funcion de prueba
 
 void MenuSlctOpcion(int opcion, bool &salir)
 {
@@ -73,6 +74,7 @@ void subMenu(int opn, bool  &salir)
         salir = true;
         break;
     }
+    //el void submenu es el sub menu que se utiliza en uno de los puntos para acceder a la lista de registros
 }
 
 int DarOpciones()
@@ -89,6 +91,7 @@ int DarOpciones()
     cout<< "0.salir "<<"\n";
     cin>>opcion;
     return opcion;
+//este es el mensaje incial que damos para que el usuario elija la opcion
 }
 
 int opcSubMen()
@@ -103,6 +106,6 @@ int opcSubMen()
     cout<< "0.salir "<<"\n";
     cin>>opn;
     return opn;
-
+//estes es un menu en progreso para acceder a los registros logrados
 }
 

@@ -15,6 +15,8 @@ int main()
     {
         opcion = DarOpciones();
         MenuSlctOpcion(opcion, salir);
+    //esto es un while que mantiene el archivo abierto hasta que la bandera salir seea 'true'.
     }
+
     return 0;
 }
