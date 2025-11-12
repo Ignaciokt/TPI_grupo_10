@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1762817482 source:c:\users\user\onedrive\documentos\uni\prog utn\cpp\holamund\tpintegrador\funciones.cpp
+	<iostream>
+
+1762818027 source:c:\users\user\onedrive\documentos\uni\prog utn\cpp\holamund\tpintegrador\main.cpp
+	<iostream>
+	"head.h"
+
+1762818172 c:\users\user\onedrive\documentos\uni\prog utn\cpp\holamund\tpintegrador\head.h
+
