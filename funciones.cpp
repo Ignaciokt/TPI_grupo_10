@@ -6,10 +6,11 @@ using namespace std;
 void hola()
 {
     cout<<"hola"<<"\n";
-}
 //el void hola es simplemente una funcion de prueba
+}
 
-void MenuSlctOpcion(int opcion, bool &salir)
+
+void MenuSlctOpcion(int opcion, bool &salir, IDMarc IDMarca[cantDeMarcas],stckProduct lot2[cantDeProductos ])
 {
 //menu para seleccionar una opcion 1. Cargar lote de marcas
 
@@ -17,26 +18,31 @@ void MenuSlctOpcion(int opcion, bool &salir)
     switch(opcion)
     {
     case 1:
-        hola();
+        solLot1(IDMarca);
+        muestraLote1(IDMarca);
+
         //funcion
         break;
 
     case 2:
+        solLot2(lot2);
         //funcion
         break;
 
     case 3:
-        {
+    {
         int opn;
         bool sali = false ;
-        while (sali !=true){
-        opn = opcSubMen();
-        subMenu(opn,sali);
+        while (sali !=true)
+        {
+            opn = opcSubMen();
+            subMenu(opn,sali);
         }
-        }
+    }
         //funcion
-        break;
+    break;
     case 4:
+        hola();
         //funcion
         break;
     case 5:
@@ -81,7 +87,7 @@ int DarOpciones()
 {
     //se encargar de proporcionar opciones y devolver la selecccionada
     int opcion;
-    cout<< "1.opcion ";
+    cout<< "1.carga de marcas ";
     cout<< "||||| ";
     cout<< "2. Cargar lote de productos "<<"\n";
     cout<< "3. Cargar lote de formas de pago ";
@@ -107,5 +113,57 @@ int opcSubMen()
     cin>>opn;
     return opn;
 //estes es un menu en progreso para acceder a los registros logrados
+}
+
+
+void solLot1(IDMarc IDMarca[cantDeMarcas])
+{
+//solicitud del lote 1 marcas
+    cin.ignore();
+    for (int i=0; i < cantDeMarcas; i++)
+    {
+        cout << "ingrese el nombre de la de marca: " << "\n";
+        cin.getline(IDMarca[i].nom, 50);
+        //cin >>IDMarca[i].nom, 50;
+        cout << "ingrese el codigo de marca" << "\n";
+        cin >> IDMarca[i].cod;
+        cin.ignore();
+
+    }
+}
+
+
+void muestraLote1(IDMarc IDMarca[cantDeMarcas])
+{
+    //muestra el lote de marcas
+    for (int i = 0; i < cantDeMarcas; i++)
+    {
+        cout << "Marca: " << IDMarca[i].nom << " ||| Codigo: " << IDMarca[i].cod << "\n";
+    }
+}
+
+
+void solLot2(stckProduct lot2[cantDeProductos ])
+{
+//solicitud del lote de productos
+    cin.ignore();
+    for (int i=0; i < cantDeProductos ; i++)
+    {
+        cout << "ingrese el codigo del producto: " << "\n";
+        cin >> lot2[i].codDeP;
+        cout << "ingrese el nombre del producto: " << "\n";
+        cin.getline(lot2[i].Nomb, 50);
+        //cin >>lot2[i].Nomb, 50;
+        cout << "ingrese el precio de venta del producto: " << "\n";
+        cin >> lot2[i].PrecDVen;
+        cout << "ingrese el precio de compra del producto: " << "\n";
+        cin >> lot2[i].precDCompra;
+        cout << "ingrese el stock del producto" << "\n";
+        cin >> lot2[i].stckDisp;
+        cout << "ingrese el codigo de marca" << "\n";
+        cin >> lot2[i].coDMarc;
+        cin.ignore();
+
+    }
 }
 
