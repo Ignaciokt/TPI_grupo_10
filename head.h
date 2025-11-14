@@ -9,8 +9,6 @@ struct IDMarc
     int cod;
 };
 
-
-
 struct stckProduct
 {
     float codDeP;
@@ -20,6 +18,14 @@ struct stckProduct
     int stckDisp;
     int coDMarc;
 };
+
+/*struct forDPag
+{
+    char codDFoPago[3];
+    char nomDFoPago[50];
+    int descoInteres;
+};
+*/
 
 void hola();
 void MenuSlctOpcion(int opcion, bool &salir, IDMarc IDMarca[cantDeMarcas],stckProduct lot2[cantDeProductos ]);

@@ -104,7 +104,7 @@ int opcSubMen()
 {
     //se encargar de proporcionar opciones y devolver la selecccionada
     int opn;
-    cout<< "1. Recaudaci�n por producto "<<"\n";
+    cout<< "1. Recaudación por producto "<<"\n";
     cout<< "2. Porcentaje de ventas por forma de pago "<<"\n";
     cout<< "3. Ventas por marca y forma de pago "<<"\n";
     cout<< "4. Cargar lote de ventas "<<"\n";
@@ -167,3 +167,70 @@ void solLot2(stckProduct lot2[cantDeProductos ])
     }
 }
 
+
+
+/*void solLot3(forDPag lot3, int suEs )
+{
+//solicitud del lote 1 marcas
+    cin.ignore();
+    for (int i=0; i < cantDeMarcas; i++)
+    {
+        cout << "seleccione su forma de pago:EF: Efectivo \n ● MP: Mercado Pago \n ● TR: Transferencia \n ● TC: Tarjeta de Crédito \n ● CT: Criptomoneda " << "\n";
+        cin.getline(lot3[i].codDFoPago, 2);
+        if( !=EF, MP, TR, TC, CT)
+        {
+            cout << "ingrese una forma de pago correcto" << "\n";
+        }
+        //cin >>lot3[i].codDFoPago, 2;
+        selNomDPag( lot3 );
+        cout << "ingrese su saldo" << "\n";
+        lot3[i].descoInteres = suES;
+
+        cin.ignore();
+
+
+
+    }
+}
+
+int suES (){
+    int saldo;
+    cin >> saldo;
+ if(saldo < 0){
+    saldo = negativo
+ }
+else{
+    saldo = positivo
+}
+}
+
+void selNomDPag(forDPag lot3 )
+{
+    if( lot3[i].codDFoPago = EF)
+    {
+        lot3[i].nomDFoPago = "Efectivo"
+    }
+    if( lot3[i].codDFoPago = TR)
+    {
+        lot3[i].nomDFoPago = "Transferencia"
+    }
+    if (lot3[i].codDFoPago = MP )
+    {
+        lot3[i].nomDFoPago = "Mercado Pago"
+    }
+    if else( lot3[i].codDFoPago = TC)
+        {
+            lot3[i].nomDFoPago = "Tarjeta de credito"
+        }
+    else( lot3[i].codDFoPago = CP)
+    {
+        lot3[i].nomDFoPago = "Criptomoneda "
+    }
+}
+
+int porcentLot3(forDPag lot3 ){
+    cout << "ingrese el codigo de marca" << "\n";
+        cin >> lot3[i].descoInteres;
+
+}
+*/

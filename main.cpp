@@ -14,6 +14,7 @@ int main()
     IDMarc IDMarca[cantDeMarcas];
     //con el tipo de dato struc se genera un vector con una variable constante
     stckProduct lot2[cantDeProductos];
+    //forDPag lot3;
 
 
     while (salir !=true)
